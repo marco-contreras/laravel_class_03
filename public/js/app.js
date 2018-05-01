@@ -13867,10 +13867,10 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(12);
-__webpack_require__(43);
 __webpack_require__(44);
 __webpack_require__(45);
-module.exports = __webpack_require__(46);
+__webpack_require__(46);
+module.exports = __webpack_require__(47);
 
 
 /***/ }),
@@ -13899,6 +13899,8 @@ Vue.component('example-component', __webpack_require__(39));
 var app = new Vue({
   el: '#app'
 });
+
+__webpack_require__(43);
 
 /***/ }),
 /* 13 */
@@ -47382,7 +47384,7 @@ if (false) {
 /* 43 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+console.log("Custom Script");
 
 /***/ }),
 /* 44 */
@@ -47398,6 +47400,12 @@ if (false) {
 
 /***/ }),
 /* 46 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 47 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

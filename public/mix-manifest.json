@@ -3,5 +3,6 @@
     "/css/app-less.css": "/css/app-less.css",
     "/css/app.css": "/css/app.css",
     "/css/app-sass.css": "/css/app-sass.css",
-    "/css/app-stylus.css": "/css/app-stylus.css"
+    "/css/app-stylus.css": "/css/app-stylus.css",
+    "/js/all.js": "/js/all.js"
 }
