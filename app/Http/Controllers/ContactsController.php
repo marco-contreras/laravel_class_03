@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Contact;
+use http\Env\Response;
 use Illuminate\Http\Request;
 
 class ContactsController extends Controller
@@ -14,7 +15,9 @@ class ContactsController extends Controller
      */
     public function index()
     {
-        return view('contacts.index');
+        $contacts = Contact::all();
+
+        return view('contacts.index', compact('contacts'));
     }
 
     /**
@@ -37,7 +40,7 @@ class ContactsController extends Controller
     {
         Contact::create($request->all());
 
-        return "Done";
+        return redirect()->route('contacts.index');
     }
 
     /**
@@ -48,7 +51,9 @@ class ContactsController extends Controller
      */
     public function show($id)
     {
-        return view('contacts.show');
+        $contact = Contact::findOrFail($id);
+
+        return view('contacts.show', compact('contact'));
     }
 
     /**
@@ -59,7 +64,9 @@ class ContactsController extends Controller
      */
     public function edit($id)
     {
-        return view('contacts.edit');
+        $contact = Contact::findOrFail($id);
+
+        return view('contacts.edit', compact('contact'));
     }
 
     /**
@@ -71,7 +78,9 @@ class ContactsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Contact::findOrFail($id)->update($request->all());
+
+        return redirect()->route('contacts.index');
     }
 
     /**
@@ -82,6 +91,8 @@ class ContactsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Contact::findOrFail($id)->delete();
+
+        return redirect()->route('contacts.index');
     }
 }

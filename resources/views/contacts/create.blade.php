@@ -38,4 +38,9 @@
 
         <input type="submit" value="Crear">
     </form>
+
+
+    <br><br>
+
+    <a href="{{ route('contacts.index') }}">Regresar</a>
 @stop
