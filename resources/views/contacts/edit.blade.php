@@ -9,38 +9,38 @@
 
         <label for="name">
             Name:
-            <input type="text" name="name" value="{{ $contact->name }}">
+            <input class="form-control" type="text" name="name" value="{{ $contact->name }}">
         </label><br>
 
         <label for="lastName">
             Last Name:
-            <input type="text" name="last_name" value="{{ $contact->last_name }}">
+            <input class="form-control" type="text" name="last_name" value="{{ $contact->last_name }}">
         </label><br>
 
         <label for="nickname">
             Nickname:
-            <input type="text" name="nickname" value="{{ $contact->nickname }}">
+            <input class="form-control" type="text" name="nickname" value="{{ $contact->nickname }}">
         </label><br>
 
         <label for="ralationship">
             Relationship:
-            <input type="text" name="relationship" value="{{ $contact->relationship }}">
+            <input class="form-control" type="text" name="relationship" value="{{ $contact->relationship }}">
         </label><br>
 
         <label for="cellphone">
             Cellphone:
-            <input type="number" name="cellphone" value="{{ $contact->cellphone }}">
+            <input class="form-control" type="number" name="cellphone" value="{{ $contact->cellphone }}">
         </label><br>
 
         <label for="email">
             Email:
-            <input type="text" name="email" value="{{ $contact->email }}">
+            <input class="form-control" type="text" name="email" value="{{ $contact->email }}">
         </label><br><br>
 
-        <input type="submit" value="Actualizar">
+        <input class="btn btn-primary" type="submit" value="Actualizar">
     </form>
 
     <br><br>
 
-    <a href="{{ route('contacts.index') }}">Regresar</a>
+    <a class="btn btn-info btn-sm" href="{{ route('contacts.index') }}">Regresar</a>
 @stop

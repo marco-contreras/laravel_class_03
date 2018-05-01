@@ -16,6 +16,6 @@
 
     <br><br>
 
-    <a href="{{ route('contacts.index') }}">Regresar</a>
+    <a class="btn btn-info btn-sm" href="{{ route('contacts.index') }}">Regresar</a>
 
 @stop

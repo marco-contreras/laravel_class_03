@@ -8,39 +8,39 @@
 
         <label for="name">
             Name:
-            <input type="text" name="name">
+            <input class="form-control" type="text" name="name">
         </label><br>
 
         <label for="lastName">
             Last Name:
-            <input type="text" name="last_name">
+            <input class="form-control" type="text" name="last_name">
         </label><br>
 
         <label for="nickname">
             Nickname:
-            <input type="text" name="nickname">
+            <input class="form-control" type="text" name="nickname">
         </label><br>
 
         <label for="ralationship">
             Relationship:
-            <input type="text" name="relationship">
+            <input class="form-control" type="text" name="relationship">
         </label><br>
 
         <label for="cellphone">
             Cellphone:
-            <input type="number" name="cellphone">
+            <input class="form-control" type="number" name="cellphone">
         </label><br>
 
         <label for="email">
             Email:
-            <input type="text" name="email">
+            <input class="form-control" type="text" name="email">
         </label><br><br>
 
-        <input type="submit" value="Crear">
+        <input class="btn btn-primary" type="submit" value="Crear">
     </form>
 
 
     <br><br>
 
-    <a href="{{ route('contacts.index') }}">Regresar</a>
+    <a class="btn btn-info btn-sm" href="{{ route('contacts.index') }}">Regresar</a>
 @stop

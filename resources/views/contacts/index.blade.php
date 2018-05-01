@@ -3,7 +3,7 @@
 @section('content')
     <h1>Contactos</h1>
 
-    <table width="100%" border="1">
+    <table class="table">
         <thead>
         <tr>
             <th>Id</th>
@@ -30,12 +30,12 @@
                 <td>{{ $contact->created_at }}</td>
 
                 <td>
-                    <a href="{{ route('contacts.show', $contact->id) }}">Ver</a>
-                    <a href="{{ route('contacts.edit', $contact->id) }}">Editar</a>
+                    <a class="btn btn-primary btn-sm" href="{{ route('contacts.show', $contact->id) }}">Ver</a>
+                    <a class="btn btn-success btn-sm" href="{{ route('contacts.edit', $contact->id) }}">Editar</a>
                     <form style="display: inline" method="POST" action="{{ route('contacts.destroy', $contact->id) }}">
                         {!! method_field('DELETE') !!}
                         {!! csrf_field() !!}
-                        <button type="submit">Remover</button>
+                        <button class="btn btn-danger btn-sm" type="submit">Remover</button>
                     </form>
                 </td>
             </tr>
@@ -45,5 +45,5 @@
 
     <br><br>
 
-    <a href="{{ route('contacts.create') }}">Añadir nuevo contacto</a>
+    <a class="btn btn-info btn-sm" href="{{ route('contacts.create') }}">Añadir nuevo contacto</a>
 @stop
