@@ -34,7 +34,7 @@
 
         <label for="email">
             Email:
-            <input class="form-control" type="text" name="email" value="{{ $contact->email }}">
+            <input class="form-control" type="email" name="email" value="{{ $contact->email }}">
         </label><br><br>
 
         <input class="btn btn-primary" type="submit" value="Actualizar">

@@ -10,9 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('login', 'Auth\LoginController@showLoginForm');
+Route::post('login', ['as' => 'login', 'uses' => 'Auth\LoginController@login']);
+Route::get('logout', 'Auth\LoginController@logout');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('contacts', 'ContactsController')->middleware('auth');
 
-Route::resource('contacts', 'ContactsController');
+
+Route::get('/', ['as' => 'home', function() {
+    if(!auth()->check()) {
+        return redirect()->route('login');
+    }else{
+        return view('welcome');
+    }
+}]);
